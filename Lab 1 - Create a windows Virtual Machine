@@ -1,0 +1,163 @@
+Lab 1 
+
+🖥️ Create a Windows Virtual Machine in Azure
+📘 Overview
+
+This guide walks you through the process of creating a Windows Virtual Machine (VM) in Microsoft Azure using the Azure portal. By the end of this tutorial, you'll have a running Windows VM that you can connect to via Remote Desktop Protocol (RDP).
+
+🛠️ Prerequisites
+
+Before you begin, ensure you have:
+
+An active Azure account. If you don't have one, you can sign up for a free Azure account.
+
+Basic understanding of Azure Virtual Machines.
+
+A Remote Desktop client installed on your local machine.
+
+🚀 Steps
+1. Sign in to the Azure Portal. Navigate to the Azure Portal and sign in with your Azure account credentials.
+
+2. Create a Resource Group
+
+In the left-hand menu, select Resource groups. Click on + Create. Fill in the following details:
+
+Subscription: Choose your subscription.
+
+Resource Group: Enter a name for your resource group (e.g., RG-VM-Training).
+
+Region: Select a region close to your location.
+
+Click Review + Create, then click Create.
+
+3. Create a Virtual Machine
+
+In the left-hand menu, select Virtual machines.
+
+Click on + Create, then select Azure virtual machine.
+
+In the Basics tab, fill in the following details:
+
+Subscription: Choose your subscription.
+
+Resource Group: Select the resource group you created earlier.
+
+Virtual Machine Name: Enter a name for your VM (e.g., VM-Training).
+
+Region: Select the same region as your resource group.
+
+Availability Options: Select No infrastructure redundancy required.
+
+Image: Select Windows Server 2019 Datacenter.
+
+Size: Choose a size (e.g., Standard_B1s).
+
+Authentication Type: Select Password.
+
+Username: Enter a username (e.g., azureuser).
+
+Password: Enter a strong password and confirm it.
+
+Click Next: Disks.
+
+4. Configure Disks
+
+In the Disks tab, you can leave the default settings:
+
+OS Disk Type: Select Standard SSD.
+
+Encryption Type: Select Encryption at rest with a platform-managed key.
+
+Click Next: Networking.
+
+5. Configure Networking
+
+In the Networking tab, configure the following:
+
+Virtual Network: Select Create new and enter a name (e.g., VNet-VM-Training).
+
+Subnet: Select Create new and enter a name (e.g., Subnet-VM-Training).
+
+Public IP: Select Create new and enter a name (e.g., PublicIP-VM-Training).
+
+NIC Network Security Group: Select Basic.
+
+Public inbound ports: Select Allow selected ports.
+
+Select inbound ports: Choose RDP (3389).
+
+Click Next: Management.
+
+6. Configure Management
+
+In the Management tab, you can leave the default settings:
+
+Monitoring: Select On for Boot diagnostics.
+
+OS guest diagnostics: Select On.
+
+Identity: Select Off.
+
+Auto-shutdown: Select Off.
+
+Backup: Select Off.
+
+Click Next: Advanced.
+
+7. Configure Advanced Settings
+
+In the Advanced tab, you can leave the default settings:
+
+Extensions: Select None.
+
+Custom data and cloud init: Leave blank.
+
+Click Next: Tags.
+
+8. Add Tags (Optional)
+
+In the Tags tab, you can add tags to organize your resources:
+
+Name: Enter a tag name (e.g., Environment).
+
+Value: Enter a tag value (e.g., Training).
+
+Click Next: Review + Create.
+
+9. Review and Create
+
+Review all your selections.
+
+Click Create to deploy the VM.
+
+The deployment may take a few minutes. Once completed, you'll see a notification indicating the deployment has succeeded.
+
+10. Connect to the Virtual Machine
+
+In the Azure portal, navigate to Virtual machines.
+
+Select the VM you just created.
+
+In the Overview section, click on Connect, then select RDP.
+
+Download the RDP file and open it.
+
+Enter the username and password you set earlier to log in.
+
+🧹 Clean Up Resources
+
+After you're done, it's a good practice to delete the resources to avoid unnecessary charges:
+
+In the Azure portal, navigate to Resource groups.
+
+Select the resource group you created.
+
+Click on Delete resource group.
+
+Confirm the deletion by typing the resource group name and clicking Delete.
+
+📚 Additional Resources
+
+Create a Windows virtual machine in Azure
+
+Azure Virtual Machines Documentation
