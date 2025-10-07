@@ -1,0 +1,37 @@
+Virtual Machines (VMs)
+
+Definition: A Virtual Machine is a software-based computer running in the cloud, just like a physical computer.
+
+Uses:
+
+Hosting applications or websites.
+
+Testing and development.
+
+Running software that requires Windows/Linux environments.
+
+Key Concepts:
+
+VM Size: Defines CPU, memory, and disk capabilities. Example: B1s (small, low-cost).
+
+OS Image: Pre-configured operating system like Windows Server 2019 or Ubuntu Linux.
+
+Networking: Each VM needs a Virtual Network (VNet), Subnet, and optionally a Public IP to communicate.
+
+Authentication: Username/password or SSH keys to securely connect.
+
+Availability Options: Determine how the VM handles downtime or failures.
+
+Disks: VMs have OS disks and optionally data disks for storage.
+
+#Deployment Steps (Summary)
+
+Create a Resource Group → acts as a container for your VM.
+
+Create a Virtual Machine → choose size, OS image, authentication, and region.
+
+Configure Networking → assign VNet, Subnet, Public IP, and open required ports (e.g., RDP 3389 for Windows).
+
+Connect to VM → use RDP for Windows or SSH for Linux.
+
+Clean Up → delete the Resource Group to remove all resources and avoid unnecessary costs.
