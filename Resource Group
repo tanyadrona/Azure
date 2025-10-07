@@ -1,0 +1,19 @@
+Resource Groups (RGs)
+
+Purpose: Organize and manage resources together.
+
+Benefits:
+
+Simplifies resource deployment and deletion.
+
+Helps in applying tags and policies.
+
+Makes monitoring and cost tracking easier.
+
+Key Points:
+
+A resource belongs to only one RG.
+
+RGs can contain different types of resources.
+
+RGs themselves can be moved between subscriptions if needed.
