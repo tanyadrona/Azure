@@ -1,0 +1,18 @@
+Azure Hierarchy & Resource Organization
+
+Azure organizes resources in a hierarchical structure:
+
+Management Groups – Top-level containers for multiple subscriptions; used mainly in large enterprises for governance and policy enforcement.
+
+Subscriptions – A billing and administrative boundary. Every resource in Azure belongs to a subscription.
+
+Resource Groups (RGs) – Containers that hold related Azure resources (VMs, Storage Accounts, Networks, etc.).
+
+Makes management, monitoring, and deletion easier.
+
+Example: All resources for a web application can belong to a single RG.
+
+Resources – Actual services like Virtual Machines, Storage Accounts, Databases, Virtual Networks, etc.
+
+Hierarchy:
+Management Group → Subscription → Resource Group → Resource
