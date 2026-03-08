@@ -1,0 +1,108 @@
+Overview
+
+This lab demonstrates how to create a managed data disk in Microsoft Azure and attach it to a Windows Virtual Machine. The attached disk can be used for additional storage such as application data, logs, or databases.
+
+Objective
+
+Create a managed data disk in Azure
+
+Attach the disk to an existing Windows Virtual Machine
+
+Initialize and format the disk inside the VM
+
+Make the disk available for use
+
+Prerequisites
+
+An active Microsoft Azure subscription
+
+Basic knowledge of Azure Portal
+
+A running Windows Virtual MachMachine
+
+Steps Performed
+1. Create a Windows Virtual Machine
+
+Go to the Azure Portal.
+
+Navigate to Virtual Machines.
+
+Click Create > Azure Virtual Machine.
+
+Select:
+
+Resource Group
+
+VM Name
+
+Region
+
+Windows Server Image
+
+Configure administrator username and password.
+
+Review and create the VM.
+
+2Create a Data Disk
+
+In the Azure Portal, search for Disks.
+
+Click Create Disk.
+
+Provide the following details:
+
+Resource Group
+
+Disk Name
+
+Region
+
+Disk Size
+
+Performance Type (Standard SSD / Premium SSD)
+
+Click Review + Create and then Create.
+
+3. Attach Data Disk to the VM
+
+Go to Virtual Machines.
+
+Select the created Windows VM.Click Disks under the Settings section.
+
+Click Attach existing disk.
+
+Select the newly created disk.
+
+Click Save.
+
+4. Initialize the Disk in Windows
+
+Connect to the VM using Remote Desktop (RDP).
+
+Open Disk Management.
+
+The new disk will appear as Offline/Unallocated.
+
+Initialize the disk (MBR or GPT).
+
+Create a New Simple Volume.
+
+Format the disk with NTFS and assign a drive letter.Verify the Disk
+
+Open File Explorer.
+
+Confirm the new drive appears and is ready for use.
+
+Result
+
+A managed data disk was successfully created, attached to a Windows Virtual Machine, and configured within the operating system for storage use.
+
+Learning Outcome
+
+Understanding Azure managed disks
+
+Attaching storage to virtual machines
+
+Disk initialization and formatting in Windows
+
+Managing VM storage resources in Azure
